@@ -6,6 +6,19 @@ Meeting ID: 928 6626 1326
 Passcode: 545900
 
 ----
-LMS:
+LMS (làm bài Quizz/Workshop/Assignment):
 + ID: PRO192LNT
++ Passcode: PRO192LNT@2025
 
+----
+
+Edunext (Shcedule / Disscussion)
+https://fu-edunext.fpt.edu.vn/course?id=2587
+
+----
+Tools:
+- JDK 8 : https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html
+- Netbeans 8.2 : https://taimienphi.vn/download-netbean-ide-5221/8.2-phien-ban
+----
+Support: https://www.ultraviewer.net/vi/download.html
+----
