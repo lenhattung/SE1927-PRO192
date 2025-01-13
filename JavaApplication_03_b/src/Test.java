@@ -12,5 +12,20 @@ public class Test {
     public static void main(String[] args){
         Student s1 = new Student();
         System.out.println(s1);
+        
+        Student s2 = new Student("SE002", "Nguyen Van A",2005, "Tp. HCM");
+        System.out.println(s2);
+        
+        System.out.println("Tên của sv1 : " + s1.getName());
+        System.out.println("Tên của sv2 : " + s2.getName());
+        
+        s1.setName("Xuan Son Nguyen");
+        System.out.println(s1);
+        s1.setName("");
+        System.out.println(s1);
+        s1.setbYear(2005);
+        System.out.println(s1);
+        s1.setbYear(-1);
+        System.out.println(s1);
     }
 }
