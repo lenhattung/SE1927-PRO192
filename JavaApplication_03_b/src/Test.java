@@ -27,5 +27,7 @@ public class Test {
         System.out.println(s1);
         s1.setbYear(-1);
         System.out.println(s1);
+        
+//        s1.get
     }
 }

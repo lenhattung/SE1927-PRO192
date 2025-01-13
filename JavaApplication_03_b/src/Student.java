@@ -3,6 +3,7 @@ public class Student {
     private String name;
     private int bYear;
     private String address;
+    private String hiddenInfo;
 
     public Student() {
         this.code="001";
