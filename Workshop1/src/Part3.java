@@ -35,6 +35,7 @@ public class Part3 {
 //        System.out.println(names[2]);
 //        System.out.println(names[0].substring(0,1));
 //        System.out.println(names[0].substring(1));
+
         for (int i = 0; i < n; i++) {
             String names[] = list[i].split(" ");
             for(int j=0; j<names.length; j++){
