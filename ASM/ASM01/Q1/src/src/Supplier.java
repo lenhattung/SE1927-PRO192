@@ -19,8 +19,8 @@ public class Supplier {
     public Supplier() {
         this.id = 0;
         this.name = "";
-        this.phone= "";
-        this.address= "";
+        this.phone = "";
+        this.address = "";
         this.status = false;
     }
 
@@ -86,9 +86,13 @@ public class Supplier {
     public boolean isStatus() {
         return status;
     }
-    
-    public String getStatus(){
-        return (status)?"Available":"Unavailable";
+
+    public boolean getStatus() {
+        return status;
+    }
+
+    public String getStatusValue() {
+        return (status) ? "Available" : "Unavailable";
     }
 
     public void setStatus(boolean status) {
@@ -97,7 +101,7 @@ public class Supplier {
 
     public String toTitleCase(String s) {
         if (s != null) {
-            s = s.trim();
+            s = s.trim(); // xoa khoang trang 2 dau
             String[] temp = s.split(" ");
             for (int i = 0; i < temp.length; i++) {
                 if (!temp[i].isEmpty()) {
@@ -106,14 +110,20 @@ public class Supplier {
                     temp[i] = word;
                 }
             }
-            s = String.join(" ", temp);
+            s = "";
+            for (int i = 0; i < temp.length; i++) {
+                if(!temp[i].trim().isEmpty()){
+                    s = (s +" "+temp[i]);
+                }
+            }
+            s=s.trim();
         }
         return s;
     }
 
     @Override
     public String toString() {
-        return this.id+","+getName()+","+getAddress()+","+getPhone()+","+getStatus();
+        return this.id + "," + getName() + "," + getAddress() + "," + getPhone() + "," + getStatusValue();
     }
 
 }
