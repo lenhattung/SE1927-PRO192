@@ -91,7 +91,7 @@ public class Supplier {
             s = s.trim();
             String[] temp = s.split(" ");
             for (int i = 0; i < temp.length; i++) {
-                if (temp[i].length() >= 1) {
+                if (!temp[i].isEmpty()) {
                     String word = temp[i];
                     word = word.substring(0, 1).toUpperCase() + word.substring(1).toLowerCase();
                     temp[i] = word;
