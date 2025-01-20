@@ -113,7 +113,7 @@ public class Supplier {
 
     @Override
     public String toString() {
-        return "Supplier{" + "id=" + id + ", name=" + name + ", address=" + address + ", phone=" + phone + ", status=" + status + '}';
+        return this.id+","+getName()+","+getAddress()+","+getPhone()+","+getStatus();
     }
 
 }
