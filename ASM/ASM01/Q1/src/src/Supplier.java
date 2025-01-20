@@ -9,6 +9,7 @@
  * @author tungi
  */
 public class Supplier {
+
     private int id;
     private String name;
     private String address;
@@ -48,13 +49,13 @@ public class Supplier {
 //            }
 //        }
 //        this.status = false;
-          if(name!=null && !name.isEmpty() && name.length()>=5 && name.length()<=50){
-              this.name = name;
-              this.status = true;
-          }else{
-              this.name = "no name";
-              this.status = false;
-          }
+        if (name != null && !name.isEmpty() && name.length() >= 5 && name.length() <= 50) {
+            this.name = name;
+            this.status = true;
+        } else {
+            this.name = "no name";
+            this.status = false;
+        }
     }
 
     public String getAddress() {
@@ -70,11 +71,11 @@ public class Supplier {
     }
 
     public void setPhone(String phone) {
-       if(phone!=null && phone.startsWith("0") &&(phone.length()==9|| phone.length()==10)){
-           this.phone = phone;
-       }else{
-           this.phone = "000.000.0000";
-       }
+        if (phone != null && phone.startsWith("0") && (phone.length() == 9 || phone.length() == 10)) {
+            this.phone = phone;
+        } else {
+            this.phone = "000.000.0000";
+        }
     }
 
     public boolean isStatus() {
@@ -85,9 +86,25 @@ public class Supplier {
         this.status = status;
     }
 
+    public String toTitleCase(String s) {
+        if (s != null) {
+            s = s.trim();
+            String[] temp = s.split(" ");
+            for (int i = 0; i < temp.length; i++) {
+                if (temp[i].length() >= 1) {
+                    String word = temp[i];
+                    word = word.substring(0, 1).toUpperCase() + word.substring(1).toLowerCase();
+                    temp[i] = word;
+                }
+            }
+            s = String.join(" ", temp);
+        }
+        return s;
+    }
+
     @Override
     public String toString() {
         return "Supplier{" + "id=" + id + ", name=" + name + ", address=" + address + ", phone=" + phone + ", status=" + status + '}';
     }
-    
+
 }
