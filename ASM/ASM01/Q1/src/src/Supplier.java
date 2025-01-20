@@ -20,9 +20,9 @@ public class Supplier {
 
     public Supplier(int id, String name, String address, String phone) {
         this.id = id;
-        this.name = name;
+        setName(name);
         this.address = address;
-        this.phone = phone;
+        setPhone(phone);
     }
 
     public int getId() {
@@ -52,6 +52,7 @@ public class Supplier {
               this.name = name;
               this.status = true;
           }else{
+              this.name = "no name";
               this.status = false;
           }
     }
@@ -69,7 +70,11 @@ public class Supplier {
     }
 
     public void setPhone(String phone) {
-        this.phone = phone;
+       if(phone!=null && phone.startsWith("0") &&(phone.length()==9|| phone.length()==10)){
+           this.phone = phone;
+       }else{
+           this.phone = "000.000.0000";
+       }
     }
 
     public boolean isStatus() {
