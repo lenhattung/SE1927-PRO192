@@ -17,6 +17,11 @@ public class Supplier {
     private boolean status;
 
     public Supplier() {
+        this.id = 0;
+        this.name = "";
+        this.phone= "";
+        this.address= "";
+        this.status = false;
     }
 
     public Supplier(int id, String name, String address, String phone) {
@@ -35,7 +40,7 @@ public class Supplier {
     }
 
     public String getName() {
-        return name;
+        return toTitleCase(name);
     }
 
     public void setName(String name) {
@@ -59,7 +64,7 @@ public class Supplier {
     }
 
     public String getAddress() {
-        return address;
+        return toTitleCase(address);
     }
 
     public void setAddress(String address) {
@@ -80,6 +85,10 @@ public class Supplier {
 
     public boolean isStatus() {
         return status;
+    }
+    
+    public String getStatus(){
+        return (status)?"Available":"Unavailable";
     }
 
     public void setStatus(boolean status) {
