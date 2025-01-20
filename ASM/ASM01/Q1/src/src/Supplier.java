@@ -110,13 +110,18 @@ public class Supplier {
                     temp[i] = word;
                 }
             }
-            s = "";
-            for (int i = 0; i < temp.length; i++) {
-                if(!temp[i].trim().isEmpty()){
-                    s = (s +" "+temp[i]);
-                }
-            }
-            s=s.trim();
+//            s = "";
+//            for (int i = 0; i < temp.length; i++) {
+//                if(!temp[i].trim().isEmpty()){
+//                    s = (s +" "+temp[i]);
+//                }
+//            }
+//            s=s.trim();
+
+              s = String.join(" ", temp);
+              while(s.indexOf("  ")>=0){ // Tim vi tri cua 2 khoang trang ke nhau
+                  s = s.replaceAll("  ", " "); // Replace "  " => " "
+              }
         }
         return s;
     }
