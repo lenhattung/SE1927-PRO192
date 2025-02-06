@@ -11,16 +11,16 @@
 public class Product {
     private String code;
     private String name;
-    private String make;
-    private double price;
+    private String manufacturer;
+    protected double price;
 
     public Product() {
     }
 
-    public Product(String code, String name, String make, double price) {
+    public Product(String code, String name, String manufacturer, double price) {
         this.code = code;
         this.name = name;
-        this.make = make;
+        this.manufacturer = manufacturer;
         this.price = price;
     }
 
@@ -40,12 +40,12 @@ public class Product {
         this.name = name;
     }
 
-    public String getMake() {
-        return make;
+    public String getManufacturer() {
+        return manufacturer;
     }
 
-    public void setMake(String make) {
-        this.make = make;
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
     }
 
     public double getPrice() {
@@ -54,6 +54,11 @@ public class Product {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return code + ", " + name + ", " + manufacturer + ", " + price ;
     }
     
     
