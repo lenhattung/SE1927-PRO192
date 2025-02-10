@@ -16,14 +16,18 @@ public class Vehicle {
     private int quantity;
 
     public Vehicle() {
+        setId("");
+        setName("");
+        setPrice(0);
+        setQuantity(0);
     }
 
     public Vehicle(String id, String name, double price, int quantity) {
         //this.id = id;
         setId(id);
-        this.name = name;
-        this.price = price;
-        this.quantity = quantity;
+        setName(name);
+        setPrice(price);
+        setQuantity(quantity);
     }
 
     public String getId() {
@@ -51,6 +55,11 @@ public class Vehicle {
     }
 
     public void setName(String name) {
+        if (name == null || name.length() < 5 || name.length() > 50) {
+            this.name = "new vehicle";
+            return;
+        }
+
         this.name = name;
     }
 
@@ -59,6 +68,10 @@ public class Vehicle {
     }
 
     public void setPrice(double price) {
+        if (price < 1 || price > 1000000) {
+            this.price = 1;
+            return;
+        }
         this.price = price;
     }
 
@@ -67,6 +80,10 @@ public class Vehicle {
     }
 
     public void setQuantity(int quantity) {
+        if (quantity < 1 || quantity > 1000) {
+            this.quantity = 1;
+            return;
+        }
         this.quantity = quantity;
     }
 
