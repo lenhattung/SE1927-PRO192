@@ -135,6 +135,4 @@ public class Vehicle {
     public String toString() {
         return id + ", " + getName() + ", " + String.format("%.2f", price) + ", " + quantity +", "+ String.format("%.2f", getSubToTal());
     }
-    
-    
 }
