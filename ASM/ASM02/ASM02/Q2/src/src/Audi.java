@@ -55,7 +55,7 @@ public class Audi extends Vehicle {
         return super.getId() + "," 
                 + super.getName() + "," 
                 + this.getColor() + "," 
-                + this.releasedYear + "," 
+                + this.getReleasedYear() + "," 
                 + String.format("%.2f", super.getPrice())+ ","
                 + super.getQuantity()+","
                 + String.format("%.2f", this.getSubTotal());
