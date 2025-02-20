@@ -10,5 +10,12 @@ package dto;
  * @author tungi
  */
 public class Statue extends Item{
+    // ..
+    public void inputStatue(){
+        
+    }
     
+    public void outputStatue(){
+        
+    }
 }

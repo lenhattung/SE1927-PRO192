@@ -10,5 +10,13 @@ package dto;
  * @author tungi
  */
 public class Painting extends Item{
+    // ...
     
+    public void inputPainting(){
+        
+    }
+    
+    public void outputPainting(){
+    }
+   
 }
