@@ -43,7 +43,7 @@ public abstract class Beverage {
     }
 
     public String getName() {
-        return name;
+        return toTitleCase(name);
     }
 
     public void setName(String name) {
@@ -73,6 +73,27 @@ public abstract class Beverage {
 
     public void setQuantity(int quantity) {
         this.quantity = (quantity >= 1 && quantity <= 100) ? quantity : 1;
+    }
+
+    public String toTitleCase(String s) {
+        String[] array = s.split(" ");
+        String result = "";
+
+        for (String word : array) {
+            if (word.trim().length() > 0) {
+                result += (word.substring(0, 1).toUpperCase() + word.substring(1).toLowerCase() + " ");
+            }
+        }
+        return result.trim();
+    }
+
+    public double getSubTotal() {
+        return this.price * this.quantity;
+    }
+
+    @Override
+    public String toString() {
+        return id + "," + getName() + "," + String.format("%.3f", price) + "," + quantity + "," + String.format("%.3f", getSubTotal());
     }
 
 }

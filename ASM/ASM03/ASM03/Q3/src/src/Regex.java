@@ -10,6 +10,18 @@
  */
 public class Regex {
 
+    public static String toTitleCase(String s) {
+        String[] array = s.split(" ");
+        String result = "";
+
+        for (String word : array) {
+            if (word.trim().length() > 0) {
+                result += (word.substring(0, 1).toUpperCase() + word.substring(1).toLowerCase() + " ");
+            }
+        }
+        return result.trim();
+    }
+
     public static boolean check(String s) {
         if (s == null || s.length() != 5) {
             return false;
@@ -33,7 +45,7 @@ public class Regex {
     }
 
     public static void main(String[] args) {
-        String regex = "[a-zA-Z][a-zA-Z]\\d\\d\\d";
+        String regex = "[a-zA-Z]{2}\\d{3}";
 
         String text = "TN000";
         String text2 = "TNN000";
@@ -47,5 +59,8 @@ public class Regex {
         System.out.println(sdt.matches(regex1));
         System.out.println(sdt2.matches(regex1));
 
+        
+        
+        System.out.println(toTitleCase("    Abc 123         LPP aBaC    "));
     }
 }

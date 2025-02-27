@@ -9,5 +9,4 @@
  * @author tungi
  */
 public class Coffee extends Beverage{
-    
 }
