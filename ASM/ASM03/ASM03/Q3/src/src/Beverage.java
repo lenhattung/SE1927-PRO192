@@ -87,13 +87,13 @@ public abstract class Beverage {
         return result.trim();
     }
 
-    public double getSubTotal() {
+    public double subTotal() {
         return this.price * this.quantity;
     }
 
     @Override
     public String toString() {
-        return id + "," + getName() + "," + String.format("%.3f", price) + "," + quantity + "," + String.format("%.3f", getSubTotal());
+        return id + "," + getName() + "," + String.format("%.3f", price) + "," + quantity + "," + String.format("%.3f", subTotal());
     }
 
 }
