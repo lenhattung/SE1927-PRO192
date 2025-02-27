@@ -87,9 +87,7 @@ public abstract class Beverage {
         return result.trim();
     }
 
-    public double subTotal() {
-        return this.price * this.quantity;
-    }
+    public abstract double subTotal() ;
 
     @Override
     public String toString() {
