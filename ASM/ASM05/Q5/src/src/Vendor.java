@@ -154,6 +154,7 @@ public class Vendor implements Comparable<Vendor> {
         if (this.getSale() == that.getSale()) {
             return this.getName().compareTo(that.getName());
         } else {
+            // descending
             if (this.getSale() - that.getSale() < 0) {
                 return 1;
             } else {

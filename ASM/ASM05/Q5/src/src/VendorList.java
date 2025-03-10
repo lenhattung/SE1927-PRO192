@@ -75,7 +75,5 @@ public class VendorList extends ArrayList<Vendor> {
         for (Vendor vendor : list) {
             System.out.println(vendor);
         }
-
-        
     }
 }
