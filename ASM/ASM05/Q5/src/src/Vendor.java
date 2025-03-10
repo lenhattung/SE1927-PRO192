@@ -10,7 +10,7 @@ import java.util.Objects;
  *
  * @author tungi
  */
-public class Vendor {
+public class Vendor implements Comparable<Vendor> {
 
     private int id;
     private String name;
@@ -94,7 +94,7 @@ public class Vendor {
 
     @Override
     public String toString() {
-        return getId() + "," + getName() + "," + getAddress() + "," + getPhone() + "," +String.format("%.3f", getSale());
+        return getId() + "," + getName() + "," + getAddress() + "," + getPhone() + "," + String.format("%.3f", getSale());
     }
 
     @Override
@@ -138,11 +138,27 @@ public class Vendor {
         String[] words = s.split(" ");
         for (String word : words) {
             if (word.trim().length() > 0) {
-                String temp = word.substring(0, 1).toUpperCase() 
+                String temp = word.substring(0, 1).toUpperCase()
                         + word.substring(1).toLowerCase();
-                result+=(temp +" ");
+                result += (temp + " ");
             }
         }
         return result.trim();
+    }
+
+    @Override
+    public int compareTo(Vendor that) {
+        // = 0: a==b
+        // > 0: a>b
+        // < 0: a<b
+        if (this.getSale() == that.getSale()) {
+            return this.getName().compareTo(that.getName());
+        } else {
+            if (this.getSale() - that.getSale() < 0) {
+                return 1;
+            } else {
+                return -1;
+            }
+        }
     }
 }
