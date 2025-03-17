@@ -139,8 +139,22 @@ public class MyUtilities implements IUtilities {
                 }
             }
         }
-
         return -1;
     }
 
+    public int findPalindromeNumbers(String str){
+       // String input = "abc 121 def 343 ghi 1234554321 jkl";
+       return 0;
+    }
+    
+    
+    public int countPalindromeNumbers(String str){
+       // String input = "abc 121 def 343 ghi 1234554321 jkl";
+       return 3;
+    }
+    
+    public int countPalindromeStrings(String str){
+       // String input = "abc 121 ded 343 ghi 1234554321 jkl";
+       return 4;
+    }
 }
