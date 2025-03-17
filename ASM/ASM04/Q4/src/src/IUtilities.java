@@ -21,5 +21,7 @@ public interface IUtilities {
     public int findFirstOddNumber(String value);
     
     public double sumAbsNumbers(String value);
+
+    public double sumAbsNumbers2(int value);
     
 }
